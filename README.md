@@ -97,3 +97,60 @@ This repository focuses on diabetes prediction using health indicator datasets. 
 - Advanced Analysis and Modeling.
 
 3. Use the processed datasets for machine learning model development and experimentation.
+
+
+# Machine Learning Model Development
+## Data Splitting and Imbalance Handling:
+
+Splitting data into training and testing sets.
+Addressing class imbalance using techniques like SMOTE and NearMiss.
+
+## Data Scaling:
+
+Standardizing features for consistent model performance.
+Modeling and Evaluation:
+
+Implementation of various machine learning models, including:
+Logistic Regression
+Decision Tree
+K-Nearest Neighbors (KNN)
+Random Forest
+Evaluation using metrics such as accuracy, precision, recall, F1-score, and ROC-AUC.
+
+# Flask Web Application for Diabetes Prediction
+- Application Overview:
+
+  Built a Flask-based web application to enable user-friendly diabetes predictions.
+
+  Created interactive web pages using HTML templates to collect user inputs and display predictions.
+
+- Files Added:
+
+  app.py: Backend Flask application code for prediction logic.
+  
+  HTML Templates: Stored in the templates folder.
+
+  1. index.html: User input form with all required features and prompts.
+  2. result.html: Displays the prediction results.
+
+- Prediction Logic:
+
+  Models used:
+  1. Random Forest (random_forest_model.pkl)
+  2. LightGBM (lightgbm_model.pkl)
+  3. Ensemble Model (ensemble_model.pkl) with optional scaling (scaler.pkl).
+     
+  The ensemble model combines predictions from individual models for robust outputs.
+
+- Execution:
+
+  Run the Flask app using: python app.py
+  
+  Open the application in a web browser at http://127.0.0.1:5000/
+
+- Features:
+
+  Accepts user input for 15 key health indicators, such as BMI, HighBP, and GenHlth.
+
+  Scales input features if required, predicts using the ensemble model, and provides results.
+
